@@ -18,7 +18,7 @@ router.post('/callback', line.middleware(config), (req, res) => {
   Promise
     .all(req.body.events.map(handleEvent))
     .then((result) => {
-      console.log('this is TEST!!!!')
+      console.log('this')
       console.log(result)
       res.json(result)
     })
