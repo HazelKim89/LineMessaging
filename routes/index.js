@@ -17,7 +17,11 @@ const client = new line.Client(config);
 router.post('/callback', line.middleware(config), (req, res) => {
   Promise
     .all(req.body.events.map(handleEvent))
-    .then((result) => res.json(result))
+    .then((result) => {
+      console.log('this is TEST!!!!')
+      console.log(result)
+      res.json(result)
+    })
     .catch((err) => {
       console.error(err);
       res.status(500).end();
