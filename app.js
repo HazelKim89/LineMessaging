@@ -36,7 +36,11 @@ function handleEvent(event) {
   }
 
   // create a echoing text message
-  const echo = { type: 'text', text: event.message.text };
+  let temp
+  if(event.message.text == "hahaha"){
+    temp = "hihihi"
+  }
+  const echo = { type: 'text', text: temp };
 
   // use reply API
   return client.replyMessage(event.replyToken, echo);
