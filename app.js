@@ -400,17 +400,16 @@ function downloadContent(messageId, downloadPath) {
 }
 
 function handleLocation(message, replyToken) {
-  console.log(message.latitude)
-  console.log(message.longitude)
-  
   return client.replyMessage(
     replyToken,
     {
-      type: 'location',
-      title: message.title,
-      address: message.address,
-      latitude: message.latitude,
-      longitude: message.longitude,
+      type: 'text',
+      text: message.latitude+"/"+message.longtitude 
+      // type: 'location',
+      // title: message.title,
+      // address: message.address,
+      // latitude: message.latitude,
+      // longitude: message.longitude,
     }
   );
 }
