@@ -404,12 +404,12 @@ function handleLocation(message, replyToken) {
     replyToken,
     {
       type: 'text',
-      text: message.latitude+"/"+message.longtitude 
+      text: message.latitude+"/"+message.longitude 
       // type: 'location',
       // title: message.title,
       // address: message.address,
       // latitude: message.latitude,
-      // longitude: message.longitude,
+      // longtitude: message.longitude,
     }
   );
 }
