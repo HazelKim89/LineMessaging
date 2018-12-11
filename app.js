@@ -14,7 +14,7 @@ const config = {
 };
 
 // base URL for webhook server
-let baseURL = "https://hazelline.herokuapp.com/callback";
+let baseURL = "https://hazelline.herokuapp.com";
 
 // create LINE SDK client
 const client = new line.Client(config);
