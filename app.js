@@ -400,6 +400,9 @@ function downloadContent(messageId, downloadPath) {
 }
 
 function handleLocation(message, replyToken) {
+  console.log(message.latitude)
+  console.log(message.longitude)
+  
   return client.replyMessage(
     replyToken,
     {
